@@ -36,7 +36,7 @@
     <!--====== Style css ======-->
     <link rel="stylesheet" href="assets/css/style.css">
 
-
+	
 </head>
 
 <body>
@@ -71,6 +71,8 @@
         fjs.parentNode.insertBefore(js, fjs);
       }(document, 'script', 'facebook-jssdk'));
     </script>
+	
+	
 	
 	
     
@@ -245,6 +247,8 @@
                     <li><a target="_blank" href="https://www.instagram.com/programo.masterthecoding/"><i class="lni-instagram-original"></i></a></li>
                 </ul>
             </div> <!-- sidebar social -->
+			
+			
 			
         </div> <!-- content -->
 		
@@ -464,14 +468,44 @@
                             <p class="month"><span class="price"> </span></p>
                         </div>
                         <div class="pricing-list">
-                             <form >
-								<input type="text" placeholder="Email ID">
-								<input type="email" placeholder="Phone Number">
-								<textarea placeholder="What type of project you need ?" rows="5"></textarea>
-								<div class="pricing-btn rounded-buttons text-center">
-									<button class="main-btn rounded-three"  type="submit" href="/">Submit</button>
-								</div>
-							</form>
+                             <!-- <form method="post" autocomplete="off" name="google-sheet">
+								<input type="name" placeholder="Name" name="name" value="" required="">
+								<input type="email" placeholder="Email ID" name="email" value="" required="">
+								<input type="number" placeholder="Phone Number" name="phone" value="" required="">
+								<textarea placeholder="What type of project you need ?" rows="5" name="message"value="" ></textarea>
+								
+								<button class="main-btn rounded-three" type= "submit" id="mail_submit">Submit</button>
+								
+							</form> -->
+							<form method="post" autocomplete="off" name="google-sheet">
+                                        <div class="form-group">
+                                            <input type="text" name="Name" class="form-control" placeholder="Your Name *" value="" required=""/>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" name="Email" class="form-control" placeholder="Your Email *" value="" required=""/>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="number" name="Phone" class="form-control" placeholder="Your Contact Number *" value="" required=""/>
+                                        </div>
+										<div class="form-group">
+                                            <textarea placeholder="What type of project you need ?" class="form-control" rows="3" name="message" value="" ></textarea>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="submit" name="submit" class="btnSubmit btn-block" value="Login" />
+                                        </div>
+										
+                                    </form>
+									<script>
+            const scriptURL = 'https://script.google.com/macros/s/AKfycby4EvQpVumpWZ_fF5q3wPl5n3L3ZUAXK32xEY-6-Ocqn8cQcrX58FyKKroQ8KkC4S0/exec'
+            const form = document.forms['google-sheet']
+          
+            form.addEventListener('submit', e => {
+              e.preventDefault()
+              fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => alert("Thanks for Contacting us..! We Will Contact You Soon..."))
+                .catch(error => console.error('Error!', error.message))
+            })
+          </script>
 						</div>
                     </div> <!-- pricing style one -->
                 </div>
@@ -484,7 +518,7 @@
 	<!--====== QUIZ STYLE EIGHT START ======-->
 
     <section id="quiz" class="pricing-area">
-        <div class="container">
+        <div class="container"
             <div class="row justify-content-center">
                 <div class="col-lg-6">
                     <div class="section-title text-center pb-20">
